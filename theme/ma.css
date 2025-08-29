@@ -1,0 +1,96 @@
+/* ====== Design Tokens (edit once) ====== */
+:root{
+  --ma-bg: #0b1420;
+  --ma-ink: #e9edf2;
+  --ma-ink-dim: #a9b4c2;
+  --ma-accent: #c0001a;
+  --ma-muted: #111a26;
+
+  --ma-maxw: 940px;
+  --ma-radius: 14px;
+  --ma-shadow: 0 6px 24px rgba(0,0,0,.28);
+  --ma-border: 1px solid rgba(255,255,255,.12);
+
+  --ma-pad-sm: 10px;
+  --ma-pad: 16px;
+  --ma-pad-lg: 24px;
+  --ma-gutter: 24px;
+}
+
+/* Scope to main markdown container (GitBook uses .markdown/.gb-markdown) */
+.gb-markdown, .markdown { color: var(--ma-ink); }
+.gb-markdown > * { max-width: var(--ma-maxw); margin-inline: auto; }
+
+/* ====== Typography rhythm ====== */
+h1, h2, h3 { letter-spacing:.02em }
+h2 { margin-top: 2rem }
+h3 { margin-top: 1.25rem }
+
+/* ====== Tables (uniform) ====== */
+.gb-markdown table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  background: rgba(255,255,255,.03);
+  border: var(--ma-border);
+  border-radius: var(--ma-radius);
+  overflow:hidden;
+  box-shadow: var(--ma-shadow);
+}
+.gb-markdown thead th{
+  text-align:left;
+  font-weight:700;
+  background: rgba(255,255,255,.06);
+  padding: var(--ma-pad);
+  border-bottom: var(--ma-border);
+}
+.gb-markdown tbody td{
+  padding: var(--ma-pad);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.gb-markdown tbody tr:nth-child(odd) td{
+  background: rgba(255,255,255,.02);
+}
+/* Responsive wrap */
+.gb-markdown table { display:block; overflow-x:auto }
+
+/* Optional: numeric alignment helpers you can add in Markdown tables */
+td.num, th.num { text-align:right; font-variant-numeric: tabular-nums }
+
+/* ====== Images + captions (uniform) ====== */
+.ma-figure{
+  margin: var(--ma-gutter) auto;
+  text-align:center;
+}
+.ma-figure img{
+  max-width:100%;
+  height:auto;
+  border-radius: var(--ma-radius);
+  box-shadow: var(--ma-shadow);
+  border: var(--ma-border);
+  display:block; margin:0 auto;
+}
+.ma-figcaption{
+  margin-top:.6rem;
+  font-size:.95rem;
+  color: var(--ma-ink-dim);
+}
+
+/* Make bare Markdown images look similar even without wrapper */
+.gb-markdown img{
+  max-width:100%;
+  height:auto;
+  border-radius: var(--ma-radius);
+  box-shadow: var(--ma-shadow);
+  border: var(--ma-border);
+}
+
+/* ====== Mermaid containers ====== */
+.mermaid{
+  background: rgba(255,255,255,.03);
+  border: var(--ma-border);
+  border-radius: var(--ma-radius);
+  padding: var(--ma-pad);
+  box-shadow: var(--ma-shadow);
+  margin: var(--ma-gutter) auto;
+}

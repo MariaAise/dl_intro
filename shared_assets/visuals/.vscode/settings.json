@@ -1,0 +1,6 @@
+{
+  "mermaid-preview.theme": "dark",
+  "files.associations": {
+    "*.mmd": "markdown"
+  }
+}
