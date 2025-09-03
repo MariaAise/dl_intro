@@ -1,0 +1,2 @@
+import os
+os.environ["HF_DATASETS_CACHE"] = "/mnt/external/huggingface_cache" 
