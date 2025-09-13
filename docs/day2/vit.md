@@ -96,6 +96,9 @@ ViT reimagines an image as a sequence, akin to words in a sentence, and uses the
 3. **Global Attention**:
    - The Transformer encoder processes the patch sequence using self-attention, which allows each patch to "attend" to all other patches, capturing both local and long-range dependencies. For example, a patch containing part of a dog’s ear can relate to a patch of its tail, enabling holistic reasoning about the image. This is a key departure from CNNs, which rely on local receptive fields.
 
+<p align="center">
+<img src="../../shared_assets/visuals/images/vit_attention.png" alt="ViT Architecture" width="600"/>
+</p>
 4. **Layer-by-Layer Processing**:
    - Each Transformer layer refines the patch embeddings. Self-attention aggregates information across patches, while the feed-forward network processes each patch independently to add non-linear transformations. Residual connections and normalization ensure stable training. Over multiple layers, the model builds a rich representation of the image.
 
