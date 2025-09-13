@@ -51,8 +51,12 @@ Key differences include:
   - This is simpler than classic **Transformers** in NLP, which often include a decoder to generate sequences token by token. ViT omits the decoder entirely in its base form, since image classification is not a sequence generation task. 
   
   :::callout-important
-  Overall, this highlights ViT’s paradigm shift: it applies pure attention-based processing to vision inputs, avoiding convolutions and enabling more flexible, global feature extraction across the entire image.
+ 
   :::
+
+
+  > **Hint**
+>  Overall, this highlights ViT’s paradigm shift: it applies pure attention-based processing to vision inputs, avoiding convolutions and enabling more flexible, global feature extraction across the entire image.
 
 ----
 
