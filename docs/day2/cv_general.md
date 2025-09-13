@@ -25,7 +25,7 @@ flowchart LR
     end
 
     subgraph EvalLayer[Evaluation Layer]
-        C1[Classification<br/> Accuracy, F1, Top-k]
+        C1[Classification<br/> Accuracy, F1, <br/> Top-k]
         C2[Detection<br/> mAP]
         C3[Captioning<br/>BLEU, <br/> CIDEr, <br/> ROUGE]
         C4[Video<br/>Top-k, <br/> Temporal Consistency]
