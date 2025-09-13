@@ -13,7 +13,7 @@ When working with images in deep learning, the process usually follows a **three
 ```mermaid
 flowchart TD
     subgraph DataLayer[Data Layer]
-        A1[Dataset Choice<br/>ImageNet, COCO, etc.]
+        A1[Dataset Choice<br/> ImageNet, COCO, etc.]
         A2[Resizing & Normalization]
         A3[Augmentation]
     end
@@ -21,12 +21,12 @@ flowchart TD
     subgraph ModelLayer[Model Layer]
         B1[CNNs vs ViTs]
         B2[Transfer Learning]
-        B3[Task-specific Models<br/>ResNet, ViT, YOLO, BLIP]
+        B3[Task-specific Models<br/> ResNet, ViT, YOLO, BLIP]
     end
 
     subgraph EvalLayer[Evaluation Layer]
-        C1[Classification<br/>Accuracy, F1, Top-k]
-        C2[Detection<br/>mAP]
+        C1[Classification<br/> Accuracy, F1, Top-k]
+        C2[Detection<br/> mAP]
         C3[Captioning<br/>BLEU, CIDEr, ROUGE]
         C4[Video<br/>Top-k, Temporal Consistency]
     end
