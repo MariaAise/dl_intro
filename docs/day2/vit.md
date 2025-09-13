@@ -10,7 +10,9 @@ tags: ["deep learning", "computer vision", "research", "visual transformers"]
 
 **ViT**, or Vision Transformer, is a model architecture introduced in 2020 that adapts the Transformer model—originally designed for natural language processing (NLP)—to computer vision tasks like image classification. It treats an image as a sequence of fixed-size patches, similar to how Transformers process sequences of words, and uses self-attention mechanisms to capture relationships across the entire image.
 
-<img src="../../shared_assets/visuals/images/vit_full.png" alt="ViT Architecture" width="600"/>
+<p align="center">
+<img src="../../shared_assets/visuals/images/vit_paper.png" alt="ViT Architecture" width="600"/>
+</p>
 
 ### How ViT Differs from the Classic Transformer
 The classic Transformer, as introduced in the 2017 paper "Attention is All You Need," is primarily built for sequence-to-sequence tasks in NLP, such as machine translation. It consists of an encoder-decoder structure with multi-head self-attention, positional encodings, and feed-forward networks to handle variable-length sequences of tokens (e.g., words or subwords). In contrast, ViT focuses on image data and typically uses only the encoder part for tasks like classification, without a decoder for generation. 
@@ -23,8 +25,10 @@ Key differences include:
   
   - **Vision Transformers** (ViT) adapt this idea for images by cutting each image into fixed-size, non-overlapping patches (commonly 16×16 pixels). Each patch is flattened into a 1D vector and then passed through a linear projection to form a patch embedding of the same dimensionality as text tokens in NLP. To enable classification, ViT prepends a learnable “class token” (CLS) to the sequence of patch embeddings, which aggregates information across all patches during self-attention. This adaptation allows an image to be treated like a sequence of tokens, making the Transformer architecture directly applicable to visual tasks.
 
+<p align="center">
   <img src="../../shared_assets/visuals/images/vit_encoder.png" alt="ViT Encoder" width="600"/>
-  
+  </p>
+
 - **Positional Encoding**: 
 
   Both classic Transformers and Vision Transformers (ViT) rely on positional encodings to retain information about order, but they apply them differently. 
@@ -49,11 +53,6 @@ Key differences include:
   - In **ViT**, the output for classification tasks is handled by a special **CLS token**: after the final Transformer layer, the CLS token’s embedding is passed into a small multilayer perceptron (MLP) head to produce the prediction. 
   
   - This is simpler than classic **Transformers** in NLP, which often include a decoder to generate sequences token by token. ViT omits the decoder entirely in its base form, since image classification is not a sequence generation task. 
-  
-  :::callout-important
- 
-  :::
-
 
   > **Hint**
 >  Overall, this highlights ViT’s paradigm shift: it applies pure attention-based processing to vision inputs, avoiding convolutions and enabling more flexible, global feature extraction across the entire image.
@@ -61,6 +60,10 @@ Key differences include:
 ----
 
 ### Basic Components of ViT
+
+<p align="center">
+<img src="../../shared_assets/visuals/images/vit_full.png" alt="ViT Architecture" width="600"/>
+</p>
 
 1. **Image Patch Embedding**:
    - **Function**: Converts an input image into a sequence of fixed-size patches, transforming them into a format suitable for the Transformer.
