@@ -10,6 +10,8 @@ tags: ["deep learning", "computer vision", "research", "visual transformers"]
 
 **ViT**, or Vision Transformer, is a model architecture introduced in 2020 that adapts the Transformer model—originally designed for natural language processing (NLP)—to computer vision tasks like image classification. It treats an image as a sequence of fixed-size patches, similar to how Transformers process sequences of words, and uses self-attention mechanisms to capture relationships across the entire image.
 
+![ViT Architecture](../../shared_assets/visuals/images/vit_full.png){fig-alt="ViT Architecture" fig-align="center" width="80%"}
+
 ### How ViT Differs from the Classic Transformer
 The classic Transformer, as introduced in the 2017 paper "Attention is All You Need," is primarily built for sequence-to-sequence tasks in NLP, such as machine translation. It consists of an encoder-decoder structure with multi-head self-attention, positional encodings, and feed-forward networks to handle variable-length sequences of tokens (e.g., words or subwords). In contrast, ViT focuses on image data and typically uses only the encoder part for tasks like classification, without a decoder for generation. 
 
