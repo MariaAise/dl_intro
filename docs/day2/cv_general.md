@@ -14,14 +14,14 @@ When working with images in deep learning, the process usually follows a **three
 flowchart LR
     subgraph DataLayer[Data Layer]
         A1[Dataset Choice<br/> ImageNet, COCO, etc.]
-        A2[Resizing & Normalization]
+        A2[Resizing <br/> & Normalization]
         A3[Augmentation]
     end
 
     subgraph ModelLayer[Model Layer]
         B1[CNNs vs ViTs]
-        B2[Transfer Learning]
-        B3[Task-specific Models<br/> ResNet, ViT, YOLO, BLIP]
+        B2[Transfer <br/> Learning]
+        B3[Task-specific <br/> Models<br/> ResNet, ViT, YOLO, BLIP]
     end
 
     subgraph EvalLayer[Evaluation Layer]
