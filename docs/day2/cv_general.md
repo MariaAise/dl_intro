@@ -11,7 +11,7 @@ tags: ["deep learning", "computer vision", "research", "visual transformers"]
 When working with images in deep learning, the process usually follows a **three-layer workflow**. Each layer frames a different aspect of the task: preparing the data, selecting and training a model, and evaluating results. This structure ensures that when we later look at specific tasks—such as classification, detection, or captioning—you already understand how the parts fit together.
 
 ```mermaid
-flowchart TD
+flowchart LR
     subgraph DataLayer[Data Layer]
         A1[Dataset Choice<br/> ImageNet, COCO, etc.]
         A2[Resizing & Normalization]
