@@ -22,6 +22,8 @@ Key differences include:
   - In classic **Transformers**, the input pipeline is text-focused: sequences of tokens (words, subwords, or characters) are mapped into continuous vector embeddings that the model processes. 
   
   - **Vision Transformers** (ViT) adapt this idea for images by cutting each image into fixed-size, non-overlapping patches (commonly 16×16 pixels). Each patch is flattened into a 1D vector and then passed through a linear projection to form a patch embedding of the same dimensionality as text tokens in NLP. To enable classification, ViT prepends a learnable “class token” (CLS) to the sequence of patch embeddings, which aggregates information across all patches during self-attention. This adaptation allows an image to be treated like a sequence of tokens, making the Transformer architecture directly applicable to visual tasks.
+
+  <img src="../../shared_assets/visuals/images/vit_encoder.png" alt="ViT Encoder" width="600"/>
   
 - **Positional Encoding**: 
 
