@@ -86,9 +86,8 @@ These tasks combine to power **real-world systems** across industries:
 
 ### Evolution of CV approaches
 
-```python
-##![CV Evolution](images/cv_evol.png){fig-alt="CV Evolution" fig-align="center" width="150%"}
-```
+![CV Evolution](../../shared_assets/visuals/images/cv_evol.png)
+
 -   **Early computer vision (pre-2000s)**
 
     -   Mostly rule-based: edge detectors, filters, geometric operations.
