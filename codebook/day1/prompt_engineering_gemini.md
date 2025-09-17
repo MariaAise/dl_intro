@@ -29,6 +29,8 @@ A pre-trained model has vast knowledge but lacks specific intent. A simple, vagu
 
 By consciously combining **Instruction, Context, Input Data, and Output Indicators**—and using **examples** for complex tasks—you move from getting a generic, unpredictable response to a precise, reliable, and usable result.
 
+<img src="../../shared_assets/visuals/images/prompt structure.avif" alt="Prompt Structure" width="400"/>
+
 The core components of a prompt structure are:
 
 - **Instruction (The Task)**
@@ -47,6 +49,7 @@ This is the specific text, data, or question you want the model to work on.
 This specifies how you want the answer formatted. This is crucial for getting usable results, especially for automated tasks.
 *   **Examples:** `"Output in JSON format.", "Provide a bulleted list.", "Write a three-sentence summary.", "Return a table with columns X and Y."`
 
+<img src="../../shared_assets/visuals/images/prompt structure2.png" alt="Prompt Structure" width="600"/>
 ---
 
 ### From Simple to Complex Structures
