@@ -59,7 +59,7 @@ In the studio, you'll have an interface where you can:
     *   **Output:** (Model generates) "Danke schön."
 
 
-Example of interactive prompting with image: [Link](https://drive.google.com/file/d/16AKLk8j5vhjccoSeYQTrOijMitDt_V50/view?usp=sharing, https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221StkuPzsZULO_ZJK3ogsSiAaLMq1fWVHJ%22%5D,%22action%22:%22open%22,%22userId%22:%22118442671775108680915%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing, https://drive.google.com/file/d/1de-8_P6pm8Qaf6OjQPnJ2K3QILCxK2EO/view?usp=sharing, https://drive.google.com/file/d/1kb6BzV4go3oftnVHdLtNiqvfPw75mX19/view?usp=sharing, https://drive.google.com/file/d/1qzhHRY39tAHZCb5UZ27P7XIq3M0eUCi7/view?usp=sharing, https://drive.google.com/file/d/1wguihiBjsfCAarM-Okkx-agR61IBeuTZ/view?usp=sharing, https://drive.google.com/file/d/1yMc4n0koIWupW7XT05QWTgQWYoT_Wy8F/view?usp=sharing)
+Example of interactive prompting with image: [Link](https://drive.google.com/file/d/16AKLk8j5vhjccoSeYQTrOijMitDt_V50/view?usp=sharing)
 
 <img src="../../shared_assets/visuals/images/prompt1.png" alt="Gemini Interactive" width="600"/>
 

@@ -50,6 +50,7 @@ This specifies how you want the answer formatted. This is crucial for getting us
 *   **Examples:** `"Output in JSON format.", "Provide a bulleted list.", "Write a three-sentence summary.", "Return a table with columns X and Y."`
 
 <img src="../../shared_assets/visuals/images/prompt structure2.png" alt="Prompt Structure" width="600"/>
+
 ---
 
 ### From Simple to Complex Structures
@@ -109,8 +110,7 @@ Let's see how structure transforms a weak prompt into a powerful one.
     > `Your explanation should be three paragraphs long and use an analogy to a kitchen recipe."` **(Output Indicator)**
     *   *Improvement:* Adds a **role**, specific focus points, and a clear format guide.
 
-**Key Best Practices for Prompt Structure
-**
+**Key Best Practices for Prompt Structure**
 
 1.  **Be Specific and Clear:** Ambiguity is the enemy of good outputs. Prefer "list three causes" over "talk about causes."
 2.  **Place Instructions at the Beginning or End:** Models pay strong attention to the start and finish of a prompt.
@@ -279,35 +279,5 @@ Example: **Prompt Documentation Table**
 
 ---
 
-Next: Interactive prompting with Gemini in Google AI Studio ()
+Next: Interactive prompting with Gemini in Google AI Studio [Link](./gemini_interactive.md) 
 ----------
-
-# Gemini
-
-https://www.promptingguide.ai/models/gemini
-
-
-# OpenAI
-
-
-## Interactive Prompting in Google AI Studio and OpenAI playground
-
-<img src="../../shared_assets/visuals/images/google_ai.png" alt="Creating API in Google AI Studio" width="600"/>
-
-## Example of prompt engineering for image classification
-
-Image: Download the image from here [Link](./../shared_assets/visuals/images/)gemini_api1.png
-
-
-                                                                                                                                  
-
-## API-Based Prompting (Programmatic Prompting)
-
-### Setting up your API key
-
-<img src="../../shared_assets/visuals/images/gemini_api1.png" alt="Creating API in Google AI Studio" width="600"/>
-
-
-<img src="../../shared_assets/visuals/images/gemini_api2.png" alt="Creating API in Google AI Studio" width="400"/>
-
-###
