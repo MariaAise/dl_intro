@@ -659,18 +659,24 @@ For **inline image data**
 When using `generateContent`, you can pass image data directly either as an URL or a path to a local file.
 
 ```python
-from google import genai
 from google.genai import types
-
+from google import genai
+from google.colab import userdata
 import requests
 
-image_path = "https://goo.gle/instrument-img"
+# Fetch your secret into a variable
+GEMINI_API_KEY = userdata.get('GEMINI_API_KEY')
+
+# Pass it into the client
+client = genai.Client(api_key=GEMINI_API_KEY)
+
+
+
+image_path = "https://tinyurl.com/4zk8m5hm" # you can replace this with your own image URL
 image_bytes = requests.get(image_path).content
 image = types.Part.from_bytes(
   data=image_bytes, mime_type="image/jpeg"
 )
-
-client = genai.Client()
 
 response = client.models.generate_content(
     model="gemini-2.5-flash",
@@ -680,5 +686,10 @@ response = client.models.generate_content(
 print(response.text)
 ```
 
-For **File API uploads**
+For **larger images** or when you need to **reuse the same file across multiple requests**, it’s best to use the **Files API**. The snippet below shows how to upload an image and reference it in a `generateContent` call. For additional details and examples, refer to the *Files API guide*.
+
+
+
+
+
 
