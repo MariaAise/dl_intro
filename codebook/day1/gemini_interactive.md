@@ -59,7 +59,10 @@ In the studio, you'll have an interface where you can:
     *   **Output:** (Model generates) "Danke schön."
 
 
-Example of interactive prompting with image: [Link](https://drive.google.com/file/d/16AKLk8j5vhjccoSeYQTrOijMitDt_V50/view?usp=sharing)
+**Example of interactive prompting for image classification**: [Link](https://drive.google.com/file/d/16AKLk8j5vhjccoSeYQTrOijMitDt_V50/view?usp=sharing)
+
+To replicate download the image from here [Link](./../shared_assets/visuals/images/gemini_api1.png)
+
 
 <img src="../../shared_assets/visuals/images/prompt1.png" alt="Gemini Interactive" width="600"/>
 
@@ -202,3 +205,6 @@ Here are some things you can do with Google AI Studio:
 *   **Translation:** Translate text between different languages.
 *   **Image Generation:** Create images from text descriptions. 
 
+-------
+
+*Next*: Gemini API in Google Colab [Link](./gemini_api.md)
