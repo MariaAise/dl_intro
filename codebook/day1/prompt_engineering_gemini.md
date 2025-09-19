@@ -279,5 +279,5 @@ Example: **Prompt Documentation Table**
 
 ---
 
-Next: Interactive prompting with Gemini in Google AI Studio [Link](./gemini_interactive.md) 
+*Next*: Interactive prompting with Gemini in Google AI Studio [Link](./gemini_interactive.md) 
 ----------

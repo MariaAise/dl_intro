@@ -689,7 +689,8 @@ print(response.text)
 For **larger images** or when you need to **reuse the same file across multiple requests**, it’s best to use the **Files API**. The snippet below shows how to upload an image and reference it in a `generateContent` call. For additional details and examples, refer to the *Files API guide*.
 
 
-
+------
+*Next*: Building an Image Analyzer with Gemini API [Link](./gemini_image_analyzer.md)
 
 
 
