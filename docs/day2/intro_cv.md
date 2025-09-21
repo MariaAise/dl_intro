@@ -5,6 +5,7 @@ author: "Maria A"
 description: "Introduction to CV tasks and architectures."
 tags: ["deep learning", "computer vision", "research"]
 ---
+# Introduction to Computer Vision
 
 > *“A picture is worth a thousand words — but in computer vision, it’s also millions of pixels that need to be understood.”*
 

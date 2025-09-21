@@ -1,0 +1,166 @@
+
+en
+
+00:00:00
+
+Welcome to this video on transformers and vision. Here, we'll look at image classification, object detection, and segmentation, tasks that have been traditionally dominated by CNNs, but where transformers are now showing remarkable capabilities. Let's look at three fundamental tasks in computer vision
+
+
+00:00:20
+
+and see how vision transformers handle each one. Using this image of a cat sitting on leaves, we can understand the increasing complexity of these tasks. First, we have image classification. This is the most straightforward task. The model looks at the entire image and answers the question, what's in this image? Here, our vision transformer processes the whole image
+
+
+00:00:40
+
+through its patch-based attention mechanism and confidently identifies it as a cat with 96% probability. The global attention we discussed earlier is particularly helpful here as it allows the model to consider all parts of the image when making its decision. Moving to object detection, we are asking not just what's in the image, but where is it?
+
+
+00:01:00
+
+Notice how the model now needs to output both the classification, cat, and the precise coordinates for the bounding box, the x-coordinate, the y-coordinate, the width and height of the box that frames the cat. This is where the transformer's ability to understand relationships between different image regions becomes crucial. It needs to figure out not just that there's a cat,
+
+
+00:01:20
+
+but exactly where it begins and ends. Finally, we have image segmentation. The most detailed task of the three. Instead of just drawing a box around the cat, the model needs to identify exactly which pixels belong to the cat, creating what we see as a pixel-wise purple overlay. This requires understanding the image at the finest level of detail,
+
+
+00:01:42
+
+something vision transformers can handle well thanks to their ability to process relationships between patches at multiple scales. Each of these tasks build on the previous one, requiring increasingly precise understanding of the image content. We'll explore each of these applications in more detail through this video to see exactly how vision transformers tackle
+
+
+00:02:02
+
+these different levels of complexity. Let's explore how vision transformers tackle the fundamental task of image classification. When this architecture was first introduced in 2020, it represented a bold reimagining of how we could apply transformer models, which had revolutionized language processing to visual tasks.
+
+
+00:02:21
+
+Looking at the familiar architecture diagram we discussed earlier, we can now focus specifically on how it handles classification. The process starts just as we learned before. The image is divided into patches, similar to breaking a puzzle into pieces. These patches are flattened and embedded, creating the sequence our transformer can process.
+
+
+00:02:40
+
+Like we saw in Module 2, the classification token, the CLS token, we see at the start of the sequence is particularly interesting for classification. Just as BERT uses this special token to gather information about a sentence, vision transformers use it to aggregate information about the entire image. Through the self-attention mechanism that we explored,
+
+
+00:03:00
+
+this token learns to capture the most relevant features from all the image patches to make the final classification decision. A fascinating aspect that we discussed earlier of a vision transformer is that it has extremely high computational and data demands. It needed massive amounts of data when first introduced
+
+
+00:03:21
+
+to match the performance of CNNs. This wasn't just a limitation, as it revealed something fundamental about how these models learn to understand visual information without the built-in assumptions about image structure that CNNs have. Later versions would find clever ways to address this challenge. But building on our understanding of image classification, let's explore how detection transformers, or DETR,
+
+
+00:03:42
+
+take vision transformers to the next level for object detection. DETR offers an elegant solution to a complex problem, not just identifying what's in the image, but precisely locating multiple objects. Looking at our architecture diagram, DETR starts with a CNN backbone,
+
+
+00:04:01
+
+which might seem surprising given our earlier discussion about transformers. But there's a good reason for this. As we discussed, CNNs excel at initial feature extraction, capturing those basic visual elements. These features are then combined with positional encoding, which as we learned earlier, is crucial for transformers to understand spatial relationships.
+
+
+00:04:21
+
+This information flows through a transformer encoder, using those self-attention mechanisms we discussed to understand relationships between all parts of the image simultaneously. This global understanding is essential for detection, because objects and images often have meaningful relationships with each other. Think about detecting a person sitting on a chair, where understanding this relationship helps in detecting both objects.
+
+
+00:04:44
+
+Now here's where DETR gets really interesting. Its decoder uses what we call object queries. Think of these as 100 different specialized detectors working in parallel, like having 100 experts each looking at the same image simultaneously. During training, these queries learn to specialize. Some might become experts at finding small objects,
+
+
+00:05:02
+
+others are detecting faces, others are detecting cats, so on. Each query works through a simple feed-forward neural network to produce two things, the class of the object and its precise location using bounding box coordinates. Some queries might output no object if they don't find anything significant. Looking at our seagull example,
+
+
+00:05:20
+
+you can see how some queries successfully identified the birds and provided their exact locations, whereas others reported no objects. This value prediction approach represents a significant advancement over traditional object detection systems. Instead of using complex post-processing steps, DETR learns end-to-end which parts of the image are important
+
+
+00:05:41
+
+and how to detect objects directly. It's a more streamlined and elegant approach that demonstrates how transformer architectures can reshape fundamental computer vision tasks. Moving on to the most detailed tasks in computer vision, let's explore image segmentation. Looking at this example with sheep, we can see how segmentation offers increasingly precise ways
+
+
+00:06:02
+
+to understand what's in an image. Breaking this down, in the first image we see the original photo, a group of sheep with one white guard dog in front. When we move to semantic segmentation in the second image, notice how the model identifies and highlights different categories, the dog in yellow and the sheep in green. This type of segmentation is concerned with identifying
+
+
+00:06:22
+
+what each pixel represents at a category level. All the sheep belong to one segment, and the dog belongs to a separate segment. But the real power of segmentation becomes clear in the next image, where we combine semantic segmentation and instance-based segmentation. Here, not only do we know what each pixel represents,
+
+
+00:06:41
+
+but we can also distinguish between individual instances of the same class. Look at how each sheep is given a different color. This means the model understands not just that these pixels are sheep, but this is sheep number one, this is sheep number two, and so on. The dog remains distinctly identified, and even the background elements like grass and sky
+
+
+00:07:00
+
+are semantically labeled with different colors. This progress from semantic segmentation to instance segmentation represents a significant jump in complexity from the object detection we just discussed with DETR. While object detection gave us boxes around objects, segmentation requires understanding the precise boundaries of each object down to the pixel level.
+
+
+00:07:20
+
+It's like moving from drawing rough boxes around objects to carefully coloring them within the lines. In the context of transformers, this task really showcases the power of their attention mechanisms. The model needs to understand not just where these objects are, but exactly which pixels belong to each object, requiring that detailed understanding of relationships
+
+
+00:07:41
+
+between different parts of the image that we discussed. This is where the transformer's ability to process global context becomes particularly valuable. It can consider the entire image while making decisions about individual pixels. Let's have a high-level overview of how transformers handle image segmentation without diving too deep into the technical details.
+
+
+00:08:01
+
+Think of this architecture as having three main components working together. Each with a specific role. The process starts with pixel-level module, which is our foundation. Just as we extract patches in regular vision transformers, here we need to understand what's happening at each pixel. This module helps us get detailed information of every point in the image.
+
+
+00:08:22
+
+The transformer module might look familiar. It's similar to the DETR architecture we just discussed, using learnable queries to understand different parts of the image. This gives us the powerful ability to connect and understand relationships across the entire image. Finally, the segmentation module brings it all together, making the final decisions
+
+
+00:08:41
+
+about which pixels belong to which objects. It combines the detailed pixel-level information with the broader understanding from the transformer to create those precise segmentation masks we saw in our sheep example earlier. Understanding how these three modules work together helps us see how transformers handle the intricate segmentation tasks.
+
+
+00:09:02
+
+This architecture combines local pixel-level detail with global image understanding, enabling those precise segmentation results we saw earlier. To bring it all together, let's recap what we've learned in this video about vision transformers and their impact on computer vision tasks. We've seen a fascinating progression
+
+
+00:09:20
+
+in how these models handle increasingly complex visual challenges. Vision transformers have fundamentally changed our approach to computer vision by moving away from manually designed components. Instead of relying on handcrafted features or complex post-processing steps, they offer a more streamlined, end-to-end solution that learns directly from the data.
+
+
+00:09:41
+
+In object detection, DETR showcases this elegant approach beautifully. It uses object queries to directly predict what's in an image, which is remarkably different from previous approaches, which involves generating thousands of potential detections and then filtering them down. DETR's queries work together to identify objects directly,
+
+
+00:10:01
+
+much like a team of experts analyzing different parts of the image simultaneously. Finally, we explored how transformers handle the intricate task of segmentation. Their ability to understand relationships across the entire image makes them particularly powerful here. By processing both semantic and instance information, they can not only identify what's in an image,
+
+
+00:10:21
+
+but also precisely determine the boundaries of each individual object, giving us that complete scene understanding that we saw in our example. Each of these applications demonstrates how the transformer architecture's core strengths, particularly its ability to process global relationships,
+
+
+00:10:40
+
+translate into more effective solutions for fundamental computer vision tasks. In the next video, we'll look at the other side of transformers and vision, taking us into a new territory where models can actually create rather than just analyze.
