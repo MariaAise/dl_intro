@@ -8,10 +8,6 @@ tags: ["deep learning", "prompt engineering", "research"]
 
 # Using Gemini via API in Google Colab
 
-
-https://www.promptingguide.ai/models/gemini
-
-
 The **Gemini API** is an interface provided by Google that allows developers to integrate **Gemini** into their own applications, websites, and scripts.
 
 ### What is API?
@@ -168,11 +164,9 @@ Examples where a smaller/cheaper model is usually enough:**
 
 **Rule of thumb:** Start with a lighter model if your task is simple and deterministic. Move up to a more advanced model only when you need reasoning depth, multimodal inputs, or creativity.
 
-<img src="../../shared_assets/visuals/images/dl_intro/shared_assets/visuals/images/gemini_model_variants.png" alt="Gemini Family" width="600"/>
+<img src="../../shared_assets/visuals/images/gemini_model_variants.png" alt="Gemini Family" width="600"/>
 
 Model variants show the type of data the model can work and the type of output it can generate
-
-
 
 ### Embeddings
 
